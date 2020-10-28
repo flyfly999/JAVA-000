@@ -13,7 +13,7 @@ public class HttpClient {
     public static void main(String[] args) {
         //     String url = "http://www.baidu.com";
         getDataAsync();
-        getDataSync();
+     //   getDataSync();
     }
 
     /**
@@ -28,8 +28,8 @@ public class HttpClient {
                 try {
                     OkHttpClient client = new OkHttpClient();
                     Request request = new Request.Builder()
-                            .url(URL)//请求接口。如果需要传参拼接到接口后面。
-                            .build();//创建Request 对象
+                            .url(URL)
+                            .build();
                     Response response = null;
                     response = client.newCall(request).execute();
                     if (response.isSuccessful()) {

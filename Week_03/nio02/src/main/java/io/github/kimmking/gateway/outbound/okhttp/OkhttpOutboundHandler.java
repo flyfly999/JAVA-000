@@ -33,7 +33,7 @@ public class OkhttpOutboundHandler {
 		this.backendUrl = backendUrl.endsWith("/")?backendUrl.substring(0,backendUrl.length()-1):backendUrl;
 
 
-		System.out.println("OkhttpOutboundHandler" + backendUrl);
+	//	System.out.println("OkhttpOutboundHandler" + backendUrl);
 
 
 
@@ -46,7 +46,7 @@ public class OkhttpOutboundHandler {
 
 	public void handle(final FullHttpRequest fullRequest, final ChannelHandlerContext ctx) {
 		final String url = this.backendUrl + fullRequest.uri();
-		System.out.println("handle:::" + url);
+	//	System.out.println("handle:::" + url);
 		okHttpGet(fullRequest, ctx, url);
 	}
 

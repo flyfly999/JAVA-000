@@ -22,7 +22,7 @@ public class HttpInboundHandler extends ChannelInboundHandlerAdapter {
     public HttpInboundHandler(String proxyServer) {
         this.proxyServer = proxyServer;
       //  handler = new HttpOutboundHandler(this.proxyServer);
-        System.out.println("HttpInboundHandler::" + proxyServer);
+     //   System.out.println("HttpInboundHandler::" + proxyServer);
         handler = new OkhttpOutboundHandler(this.proxyServer);
         filter = new HttpRequestHeaderFilter();
     }
@@ -35,7 +35,7 @@ public class HttpInboundHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         try {
-            System.out.println("channelRead流量接口请求开始，时间为{}");
+        //    System.out.println("channelRead流量接口请求开始，时间为{}");
             FullHttpRequest fullRequest = (FullHttpRequest) msg;
          //   String uri = fullRequest.uri();
 

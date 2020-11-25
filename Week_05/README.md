@@ -4,7 +4,7 @@
 ---------
 ```sql
 CREATE TABLE `t_user` (
-  id int UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '自增主键', //用户ID
+  id int UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '自增主键 用户id', 
   `name` varchar(32) NOT NULL DEFAULT '',
   `email` varchar(32) NOT NULL DEFAULT '',
   `phone` varchar(16) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE `t_user` (
 ## 商品表
 ```sql
 CREATE TABLE `t_goods` (
-  id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '自增主键', //用户ID
+  id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '自增主键 商品id',
   `name` varchar(32) NOT NULL DEFAULT '' COMMENT '商品名称',
   `price` float(10,2) NOT NULL DEFAULT '0.00' COMMENT '商品单价',
   `status` tinyint NOT NULL default 0, 
@@ -49,7 +49,7 @@ CREATE TABLE `t_orders` (
 ## 订单详情表
 ```sql
 CREATE TABLE `t_orders_detail` (
-  id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '自增主键', //用户ID
+  id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '自增主键', 
   `order_id` varchar(32) NOT NULL DEFAULT '' COMMENT '订单号',
   `good_id` BIGINT(20) UNSIGNED NOT NULL COMMENT '商品ID',
   `price` float(10,2) NOT NULL DEFAULT '0.00' COMMENT '商品单价',
